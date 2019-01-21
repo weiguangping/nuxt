@@ -14,7 +14,7 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
-  css: [{ src: '~assets/css/rest.less', lang: 'less' },{ src: '~assets/css/common.less', lang: 'less' }],
+  css: [{ src: '~assets/css/rest.less', lang: 'less' }, { src: '~assets/css/common.less', lang: 'less' }],
   /*
   ** Customize the progress bar color
   */
@@ -26,6 +26,7 @@ module.exports = {
     /*
     ** Run ESLint on save
     */
+    vendor: ['vue-i18n'],
     extend (config, { isDev, isClient }) {
       if (isDev && isClient) {
         config.module.rules.push({
@@ -37,16 +38,27 @@ module.exports = {
       }
     }
   },
-  // ... 其他配置
-  plugins: [
-    {
-      src: '@/plugins/main',
+  router: {              // customize nuxt.js router (vue-router).
+    middleware: 'i18n'   // middleware all pages of the application
+  },
+  plugins: ['~/plugins/i18n.js',{
+      src: '~/plugins/main',
       ssr: true
-    }, {
-      src: "~/plugins/axios",
-      ssr: false
-    },
-  ],
+    }],
+  // ... 其他配置
+  // plugins: [
+  //   {
+  //     src: '~/plugins/api',
+  //     ssr: true
+  //   }, {
+  //     src: "~/plugins/axios",
+  //     ssr: false
+  //   },
+  //   {
+  //     src: '~/plugins/i18n.js',
+  //     ssr: false
+  //   }
+  // ],
   modules: ['@nuxtjs/axios'], // 不需要加入@nuxtjs/proxy
   axios: {
     proxy: true,

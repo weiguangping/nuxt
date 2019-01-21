@@ -13,13 +13,22 @@
         name: 'hello World',
       }
     },
-    fetch({store}) {
+    fetch({ store }) {
       // console.log(store)
     },
     mounted() {
-      console.log(4) // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+      console.log(111) // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+      // console.log(this) // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
     },
     async asyncData({ app }) {
+      console.log(222) // Window {postMessage: ƒ, blur: ƒ, focus: ƒ, close: ƒ, frames: Window, …}
+
+      console.log(app.$api)
+      return;
+      app.$api.GET(app.$url.baseUrl).then((res) => {
+        console.log(11)
+        console.log(res)
+      })
       // let { data } = await app.$axios.get(app.$api.baseUrl)
       // return { info: data }
       // return { title: params.app.$api.baseUrl }

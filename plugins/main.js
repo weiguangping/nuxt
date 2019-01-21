@@ -1,9 +1,11 @@
 import Vue from 'vue' // vue 文件引入 - 方便在vue方法内容直接 this 调取
-import Api from './api' // 自定变量内容 其他自便
+import Api from '~/api/index' // 自定变量内容 其他自便
+import Url from '~/api/env' // 自定变量内容 其他自便
  
 let main = {
     install(Vue) {
         Vue.prototype.$api = Api; // 变量的内容 后期可以在vue中 this->$api.xxx 使用
+        Vue.prototype.$url = Url; // 变量的内容 后期可以在vue中 this->$api.xxx 使用
     }
 };
  
@@ -13,4 +15,5 @@ Vue.use(main); // 这里不能丢
 export default ({ app }, inject) => {
     // Set the function directly on the context.app object
     app.$api = Api // 名称
+    app.$url = Url // 名称
 };
