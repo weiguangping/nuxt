@@ -1,19 +1,27 @@
 <template>
-  <div>
+  <div class="themeb">
     <ul>
       <li><nuxt-link :to="{name:'index'}">HOME</nuxt-link></li>
       <li><nuxt-link :to="{name:'about'}">ABOUT</nuxt-link></li>
       <li><nuxt-link :to="{name:'news',params:{newsId:3306}}">NEWS</nuxt-link></li>
     </ul>
+    <div class="header">21111</div>
   </div>
 </template>
 <script>
   export default {
     components: {
+    },
+    created () {
+        // require('~/assets/css/bass.css')
     }
   }
 </script>
-<style>
+<style lang="less">
+  /* @import url('~/assets/css/theme.less'); */
+  ul{
+    background: @color1;
+  }
 </style>
 <!-- <template>
   <section class="container">

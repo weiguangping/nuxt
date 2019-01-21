@@ -59,7 +59,11 @@ module.exports = {
   //     ssr: false
   //   }
   // ],
-  modules: ['@nuxtjs/axios'], // 不需要加入@nuxtjs/proxy
+  modules: ['@nuxtjs/axios','@nuxtjs/style-resources'], // 不需要加入@nuxtjs/proxy
+  styleResources: {
+    less: './assets/css/color.less',
+    // sass: ...
+  },
   axios: {
     proxy: true,
     prefix: '/api', // baseURL
