@@ -1,0 +1,753 @@
+input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+  background-color: #fff!important
+}
+body {
+    height: 100%;
+    * {
+        word-wrap: break-word !important;
+    }
+}
+#articBox .mains {
+    img {
+      max-width: 100%;
+    }
+    * {
+      max-width: 100%;
+    }
+  }
+html {
+    height: 100%;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.shadow {
+    box-shadow: 0px 0px 16px @color-4;
+}
+
+.red {
+    color: @color-10;
+}
+
+.green {
+    color: @color-11;
+}
+
+.actives {
+    color: @color-3;
+}
+
+.table {
+    table {
+        tbody {
+            tr {
+                td {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.table {
+    border-top: 0 !important;
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        thead {
+            tr {
+                border-bottom: 1px solid @color-12  !important;
+                th {
+                    padding: 8px 0 !important;
+                    word-wrap: break-word !important;
+                    word-break: normal !important;
+                    font-size: 12px; // position: relative;
+                    padding: 0;
+                    font-weight: 400;
+                    background: @color-1;
+                    text-align: center;
+                    color: @color-5;
+                }
+            }
+        }
+        tbody {
+            tr {
+                border-bottom: 1px solid @color-41;
+                &:hover {
+                    background-color: @color-1;
+                }
+                td {
+                    word-wrap: break-word !important;
+                    word-break: normal !important;
+                    padding: 20px 0;
+                    box-sizing: border-box;
+                    font-size: 12px;
+                    text-align: center;
+                    font-weight: 400;
+                    color: @color-2  !important;
+                    div {
+                        font-size: 12px;
+                    }
+                    span {
+                        font-size: 12px !important;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.popup {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    z-index: 9;
+    justify-content: center;
+    align-items: center;
+    background: @color-39;
+    .content {
+        display: inline-block;
+        width: 400px;
+        height: 508px;
+        padding: 50px;
+        background: @color-1;
+        position: relative;
+        .icon-guanbi {
+            color: @color-14;
+            font-size: 11px;
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            cursor: pointer;
+        }
+        .title {
+            padding-bottom: 22px;
+            font-size: 20px;
+            line-height: 1;
+            color: @color-23;
+        }
+        li {
+            position: relative;
+            margin-top: 30px;
+            label {
+                display: block;
+                padding: 0px 0 10px 0;
+                font-size: 12px;
+                line-height: 1;
+                color: @color-5;
+            }
+            .txt {
+                height: 40px;
+            }
+            input {
+                width: 300px;
+                height: 40px;
+                border-radius: 4px;
+                background: @color-1;
+                border: 1px solid @color-14;
+                overflow-x: hidden;
+                &:focus {
+                    border: 1px solid @color-3  !important;
+                }
+                &.phone {
+                    width: 220px;
+                    border-bottom-left-radius: 0;
+                    border-top-left-radius: 0;
+                }
+            }
+            .area {
+                position: relative;
+                input {
+                    text-align: center;
+                    color: @color-2;
+                    font-size: 12px;
+                    width: 80px;
+                    border-bottom-right-radius: 0;
+                    border-top-right-radius: 0;
+                    border-right: 0;
+                    padding-right: 35px;
+                    cursor: pointer;
+                }
+                i {
+                    position: absolute;
+                    top: 50%;
+                    right: 18px;
+                    margin-top: -8px;
+                    font-size: 5px;
+                }
+            }
+            &.pwd {
+                input {
+                    position: absolute;
+                    top: 22px;
+                    opacity: 0;
+                    z-index: 9;
+                }
+                a {
+                    height: 20px;
+                    width: 2px;
+                    background: @color-5;
+                    display: inline-block;
+                    position: absolute;
+                    top: 10px;
+                }
+            }
+        }
+        .bnt {
+            width: 140px;
+            height: 40px;
+            border-radius: 4px;
+            border: 0;
+            background: @color-3;
+            margin-top: 50px;
+            cursor: pointer;
+        }
+        .location {
+            position: absolute;
+            top: 23px;
+            right: 3px;
+        }
+        .code {
+            padding-right: 120px;
+        }
+        .select {
+            position: absolute;
+            top: 62px;
+            left: 0;
+            right: 0;
+            background: @color-34;
+            overflow-y: auto;
+            z-index: 9;
+            box-sizing: border-box;
+            padding: 15px 0;
+            height: 200px;
+            li {
+                cursor: pointer;
+                margin-top: 0;
+                height: 34px;
+                padding: 0 15px 0 40px;
+                line-height: 34px;
+                color: @color-5;
+                &:hover {
+                    background: @color-3;
+                    color: @color-12;
+                }
+                img {
+                    position: absolute;
+                    left: 10px;
+                    margin: 9px 10px 9px 0;
+                }
+                span {
+                    display: block;
+                    &:nth-child(2) {
+                        float: left;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                    }
+                    &:nth-child(3) {
+                        float: right;
+                    }
+                }
+            }
+        }
+    }
+    @-webkit-keyframes fade {
+        from {
+            opacity: 1.0;
+        }
+        to {
+            opacity: 0;
+        }
+    }
+    .pwd a {
+        animation: fade 3000ms infinite;
+        -webkit-animation: fade 1000ms infinite;
+    }
+}
+
+.red {
+    color: #E94B37 !important;
+}
+
+.green {
+    color: #54BF13;
+}
+
+/*.propmt{
+  display: block;
+  position: relative;
+  padding: 15px 10px;
+  margin-top: -34px;
+  background-color: @color-12;
+  color: @color-5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  text-align: center;
+}
+.propmt i{
+  position: absolute;
+  width: 12px;
+  left: 10px;
+  bottom: 0;
+  margin-bottom: -8px;
+  color: @color-12;
+}*/
+
+.borderRed {
+    border: 1px solid @color-40  !important;
+}
+
+/*.fade-enter-active,.fade-leave-active{
+  transition: .8s all ease;
+}
+.fade-enter-active{
+  !*变化成什么样->当元素出来时（显示）*!
+  top: 0%!important;
+  opacity: 1;
+}
+.fade-leave-active{
+  !*变化成什么样->当元素离开时（消失）*!
+  top: -100%!important;
+  opacity: 0;
+}
+.fade-enter,.fade-leave {
+  !*初始状态*!
+  top: -100%!important;
+  opacity: 0;
+}*/
+
+.overflowY {
+    overflow-y: auto !important;
+    height: 100%;
+}
+
+.clear {
+    clear: both;
+}
+
+.mask {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    min-width: 1300px;
+}
+
+.publicSelect {
+    -webkit-user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+
+.publicSelect i {
+    font-size: 12px !important;
+    padding-left: 4px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    margin-top: -5px;
+}
+
+.publicSelect .panel {
+    width: 80px;
+    overflow-y: auto;
+    max-height: 150px;
+    position: absolute;
+    top: 42px;
+    left: 60%;
+    margin-left: -50px;
+    background: @color-28;
+    padding: 5px 0;
+    z-index: 5;
+    height: auto !important;
+}
+
+.publicSelect .panelItem {
+    text-align: center;
+    font-size: 14px;
+    color: #27292e;
+    height: 30px;
+    line-height: 30px;
+}
+
+.publicSelect .panelItem:hover {
+    background: @color-59;
+}
+
+.publicPropmt {
+    color: @color-40;
+    position: absolute; // left: 85px;
+    top: 34px;
+}
+
+.bank .publicPropmt {
+    left: 0;
+    top: 62px
+}
+
+.publicPropmt i {
+    font-size: 14px;
+    vertical-align: middle;
+    display: block;
+    float: left;
+    height: 20px;
+    position: relative;
+    width: 12px;
+}
+
+.icon-cuowutishi:before {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -5px;
+}
+
+.publicPropmt span {
+    font-size: 12px;
+    line-height: 16px;
+    display: block;
+    padding-left: 5px;
+    float: left;
+}
+
+.publicTitle {
+    font-size: 16px;
+    color: @color-27;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background: @color-62;
+    position: relative;
+}
+
+.publicTitle .icon-guanbi {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+}
+
+input {
+    outline: none;
+}
+
+input[type='text'],
+input[type='password'] {
+    border-radius: 2px;
+    display: inline-block;
+    height: 36px;
+    line-height: 36px;
+    padding: 0 8px;
+    font-size: 14px;
+    color: @color-2;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+    font-size: 14px !important;
+    color: @color-14;
+}
+
+.items {
+    background: #27292e;
+    margin-bottom: 30px;
+}
+
+.items>p {
+    height: 84px;
+    line-height: 84px; // background: #27292e;
+    // padding:0 30px 0 35px;
+    position: relative;
+    font-size: 16px;
+    color: @color-28;
+}
+
+.items>p span {
+    display: inline-block;
+    font-size: 20px;
+    font-weight: 900;
+}
+
+.publicBnt {
+    text-align: center;
+}
+
+.publicBnt button,
+.publicBnt button:hover {
+    width: 170px;
+    height: 40px;
+    font-size: 16px;
+    color: #27292e;
+    border: 1px solid @color-59;
+    background: @color-59;
+    border-radius: 4px;
+    outline: none;
+    cursor: pointer;
+}
+
+.publicBnt .cancel,
+.publicBnt button.cancel:hover {
+    background: #27292e;
+    color: @color-59  !important;
+    margin-left: 20px;
+}
+
+.fontCenter {
+    text-align: center;
+}
+
+.fontRight {
+    text-align: right !important;
+}
+
+.page {
+    text-align: center;
+}
+
+/* .page ul li:hover {
+  background: @color-60;
+  color: @color-28;
+} */
+
+// .page ul li:hover a {
+//   color: @color-28!important;
+// }
+.page ul li a {
+    // color: @color-28;
+}
+
+.page ul li.ivu-page-item-active {
+    background: @color-3  !important;
+    color: #27292e !important;
+}
+
+.page ul li.ivu-page-item-active a {
+    color: #27292e !important;
+}
+
+.page ul li.ivu-page-item-active a {
+    color: #27292e;
+}
+
+.page ul li.ivu-page-disabled a {
+    color: #515661;
+}
+
+.notAllowed button {
+    cursor: not-allowed !important;
+}
+
+.publicNoData {
+    padding: 50px 0; // border: 1px solid @color-60;
+}
+
+.publicNoData img {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.publicNoData p {
+    text-align: center;
+    font-size: 12px;
+    padding-top: 15px;
+    color: @color-5;
+}
+
+.ml {
+    text-align: right;
+    padding-right: 40px;
+}
+
+.mr {
+    text-align: left;
+    padding-left: 40px;
+}
+
+.tl {
+    text-align: left;
+}
+
+.tr {
+    text-align: right;
+}
+
+.mlSmall {
+    text-align: right;
+    padding-right: 30px;
+}
+
+.mrSmall {
+    text-align: left;
+    padding-left: 30px;
+}
+
+.flexBox {
+    padding: 0 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.clearfix:before,
+.clearfix:after {
+    display: table;
+    content: " ";
+    clear: both;
+}
+
+.obainCode button {
+    height: 36px;
+    color: #27292e;
+}
+
+.obainCode button:hover {
+    color: #27292e;
+}
+
+.row2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+    transition: .8s all ease;
+}
+
+.fade-enter-active {
+    /*变化成什么样->当元素出来时（显示）*/
+    top: 0% !important;
+    opacity: 1;
+}
+
+.fade-leave-active {
+    /*变化成什么样->当元素离开时（消失）*/
+    top: -100% !important;
+    opacity: 0;
+}
+
+.fade-enter,
+.fade-leave {
+    /*初始状态*/
+    top: -100% !important;
+    opacity: 0;
+}
+
+// 加载中转动
+.pswp__preloader__icn {
+    position: absolute;
+    opacity: 0.75;
+    width: 16px;
+    height: 16px;
+    -webkit-animation: clockwise 500ms linear infinite;
+    animation: clockwise 500ms linear infinite;
+}
+
+/* The idea of animating inner circle is based on Polymer loading indicator by Keanu Lee https://blog.keanulee.com/2014/10/20/the-tale-of-three-spinners.html */
+
+.pswp__preloader__cut {
+    position: relative;
+    width: 8px;
+    height: 16px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.pswp__preloader__donut {
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    border: 2px solid #E7E9ED;
+    border-radius: 50%;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    margin: 0;
+    -webkit-animation: donut-rotate 1000ms cubic-bezier(.4, 0, .22, 1) infinite;
+    animation: donut-rotate 1000ms cubic-bezier(.4, 0, .22, 1) infinite;
+}
+
+@-webkit-keyframes clockwise {
+    0% {
+        -webkit-transform: rotate(0deg)
+    }
+    100% {
+        -webkit-transform: rotate(360deg)
+    }
+}
+
+@keyframes clockwise {
+    0% {
+        transform: rotate(0deg)
+    }
+    100% {
+        transform: rotate(360deg)
+    }
+}
+
+@-webkit-keyframes donut-rotate {
+    0% {
+        -webkit-transform: rotate(0)
+    }
+    50% {
+        -webkit-transform: rotate(-140deg)
+    }
+    100% {
+        -webkit-transform: rotate(0)
+    }
+}
+
+@keyframes donut-rotate {
+    0% {
+        transform: rotate(0)
+    }
+    50% {
+        transform: rotate(-140deg)
+    }
+    100% {
+        transform: rotate(0)
+    }
+}
+
+.component-fade-enter-active,
+.component-fade-leave-active {
+    transition: opacity .3s ease !important;
+}
+
+.component-fade-enter,
+.component-fade-leave-to
+/* .component-fade-leave-active for below version 2.1.8 */
+
+    {
+    opacity: 0;
+}
+i.iconfont.icon-guanbi:hover{
+    color: #687284;
+}
+
+li.ivu-page-item:hover{
+  background-color: #FFC12A;
+}

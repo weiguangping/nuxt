@@ -1,0 +1,28 @@
+<svg id="组_4" data-name="组 4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 86 86">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#linear-gradient);
+      }
+
+      .cls-2 {
+        fill: url(#linear-gradient-2);
+      }
+
+      .cls-3 {
+        fill: #687284;
+      }
+    </style>
+    <linearGradient id="linear-gradient" x1="0.5" y1="0.91" x2="0.5" y2="0.11" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#687284"/>
+      <stop offset="1" stop-color="#687284" stop-opacity="0.502"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" x1="0.5" y1="1.01" x2="0.5" y2="0.11" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#687284" stop-opacity="0"/>
+      <stop offset="1" stop-color="#687284" stop-opacity="0.502"/>
+    </linearGradient>
+  </defs>
+  <path id="路径_8" data-name="路径 8" class="cls-1" d="M100,0V8.6a34.4,34.4,0,0,1,0,68.8V86a43,43,0,0,0,0-86Z" transform="translate(-57)"/>
+  <path id="路径_9" data-name="路径 9" class="cls-2" d="M8.6,43A34.446,34.446,0,0,1,43,8.6V0a43,43,0,0,0,0,86V77.4A34.446,34.446,0,0,1,8.6,43Z"/>
+  <circle id="椭圆_2" data-name="椭圆 2" class="cls-3" cx="4.3" cy="4.3" r="4.3" transform="translate(38.7 77.4)"/>
+</svg>
